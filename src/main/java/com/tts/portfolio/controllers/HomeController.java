@@ -8,21 +8,23 @@ public class HomeController {
     
     @GetMapping("/")
     public String index() {
-
         return "index";
     }
 
-    @GetMapping("/projects")
-    public String projectsPage() {
-
-        return "projects";
+    @GetMapping("/about")
+    public String aboutMe() {
+        return "about";
     }
 
-    @GetMapping("/guitar")
-    public String guitarPage() {
-
-        return "guitar";
+    @GetMapping("/mywork")
+    public String myWork() {
+        return "mywork";
     }
 
+    @GetMapping("/contact")
+    public String contactMe() {
+
+        return "contact";
+    }
 
 }
