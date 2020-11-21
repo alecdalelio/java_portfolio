@@ -1,0 +1,119 @@
+/* import fonts from fonts.css file */ 
+@import url(./fonts.css);
+
+body {
+	background: linear-gradient(-135deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+.jumbotron{
+    display: grid;
+    opacity: 70%;
+    margin: 50px;
+    height: 40vh;
+    padding: 5vw;
+}
+
+.jumbotron h1, h2, h3{
+    font-size: 64px;
+    font-weight: 1000;
+    background: linear-gradient(to right, maroon, slateblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container{
+    margin-top: 40px;
+    padding: 25px;
+}
+
+#aboutimage{
+    align-content: center;
+}
+
+.abcontainer {
+    display: grid;
+    margin: 50px;
+    height: 40vh;
+    padding: 5vw;
+}
+
+.contactBox {
+    background-color: whitesmoke;
+    place-items: center;
+    display: grid;
+    opacity: 70%;
+    margin: 50px;
+    height: 40vh;
+    padding: 5vw;
+}
+
+.contactBox p {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+.about-container {
+    background-color: antiquewhite;
+    display: flex;
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    align-items: center;
+}
+
+#aboutparagraph {
+    margin-top: 20px;
+}
+
+.links-container {
+    display: flex;
+}
+
+.contactBox #profile-link, .contactBox .logo {
+    margin: 1vh 1vw;
+}
+
+.center {
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 1em;
+        min-height: 0;
+        min-width: 0;
+}
+
+.card-img{
+    width: 100%!important;
+    height: 100%!important;
+    object-fit: cover;
+ }

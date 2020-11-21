@@ -4,25 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="/src/main/resources/static/styles.css" class="style">
-    <link rel="stylesheet" href="../static/styles.css">
-    <link rel="stylesheet" href="../static/responsive.css">
+    <link rel="stylesheet" href="/styles/styles.css">
     <title>Alec D'Alelio</title>
 </head>
 <body>
 
   <div th:replace="fragments/navbar"></div>
 
-    <div class="jumbotron">
-        <h3>Hi, my name is</h3>
-        <h1 class="display-4 nameHeader">Alec D'Alelio.</h1>
-        <h2 class="descriptHeader">I build software and decentralized web applications.</h2>
-        <p class="lead">I'm a full-stack developer and Blockchain evangelist from Boston, MA using dev tools old and new to create innovative applications.</p>
-        <hr class="my-4">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Get In Touch</a>
-    </div>
+    <section>
+        <div class="jumbotron">
+            <h3>Hi, my name is</h3>
+            <h1 class="display-4 nameHeader">Alec D'Alelio.</h1>
+            <h2 class="descriptHeader">I build software and decentralized web applications.</h2>
+            <p class="lead">I'm a full-stack developer and Blockchain evangelist from Boston, MA.</p>
+        </div>
 
-    <script src="../static/js/main.js"></script>
+        <div class="grid row d-flex justify-content-around">
+            <!-- Creates for each loop and makes individual blog posts -->
+            <div th:each="project:${projects}">
+                <div class="col-md-8 p-20 mb-20 grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 th:text="${project.title}"></h2>
+                        </div>
+                        <div class="card-body">
+                            <img 
+                            th:src="${project.imageURL}"
+                            alt="projectimage"
+                            class="center card-img"
+                            >
+                            <p th:text="${project.description}" />
+                        </div>
+                        <div class="card-footer">
+                            <a th:href="${project.githubURL}" class="ghlogo">
+                                <img
+                                src="https://pngimg.com/uploads/github/github_PNG42.png"
+                                height="50px"
+                                width="50px"
+                                class="center"
+                                >
+                            </a>
+                            <a th:href="@{'/projects/delete/{id}'(id=${project.id})}" class="btn-lg btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+    </section>
+
+    <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
