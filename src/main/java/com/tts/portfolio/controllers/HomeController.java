@@ -1,6 +1,7 @@
 package com.tts.portfolio.controllers;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 import com.tts.portfolio.models.Project;
 import com.tts.portfolio.repositories.ProjectRepository;
@@ -38,11 +39,6 @@ public class HomeController {
         return "about";
     }
 
-    @GetMapping("/mywork")
-    public String myWork() {
-        return "mywork";
-    }
-
     @GetMapping("/contact")
     public String contactMe() {
 
@@ -54,10 +50,29 @@ public class HomeController {
         return "new";
     }
 
-    @RequestMapping(value = "blogpost/delete/{id}")
-    public String deletePostWithId(@PathVariable Long id, Project project) {
+    @RequestMapping(value = "project/delete/{id}")
+    public String deleteProjectWithId(@PathVariable Long id, Project project) {
         projectRepository.deleteById(id);
         return "deleted";
+    }
+
+    @RequestMapping(value = "/project/edit/{id}")
+    public String updateProject(@PathVariable Long id, Model model) {
+    	Optional<Project> result = projectRepository.findById(id);
+		Project projectEdited = null;
+
+		if(result.isPresent()) {
+			
+			projectEdited = result.get();
+			
+		} else {
+			
+            return "error";
+        
+		}
+		
+		model.addAttribute("project", projectEdited);
+		return "new";
     }
 
     @PostMapping(value = "/private/mywork")
