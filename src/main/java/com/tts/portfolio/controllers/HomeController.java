@@ -30,33 +30,33 @@ public class HomeController {
             projects.add(projectFromDB);
         }
 
-        model.addAttribute("http://evening-garden-83949.herokuapp.com/projects", projects);
+        model.addAttribute("projects", projects);
         return "index";
     }
 
-    @GetMapping("http://evening-garden-83949.herokuapp.com/about")
+    @GetMapping("/about")
     public String aboutMe() {
         return "about";
     }
 
-    @GetMapping("http://evening-garden-83949.herokuapp.com/contact")
+    @GetMapping("/contact")
     public String contactMe() {
 
         return "contact";
     }
 
-    @GetMapping(value = "http://evening-garden-83949.herokuapp.com/private/newproject")
+    @GetMapping(value = "/private/newproject")
     public String newBlog(Project project) {
         return "new";
     }
 
-    @RequestMapping(value = "http://evening-garden-83949.herokuapp.com/project/delete/{id}")
+    @RequestMapping(value = "project/delete/{id}")
     public String deleteProjectWithId(@PathVariable Long id, Project project) {
         projectRepository.deleteById(id);
         return "deleted";
     }
 
-    @RequestMapping(value = "http://evening-garden-83949.herokuapp.com/project/edit/{id}")
+    @RequestMapping(value = "/project/edit/{id}")
     public String updateProject(@PathVariable Long id, Model model) {
     	Optional<Project> result = projectRepository.findById(id);
 		Project projectEdited = null;
@@ -71,11 +71,11 @@ public class HomeController {
         
 		}
 		
-		model.addAttribute("http://evening-garden-83949.herokuapp.com/project", projectEdited);
+		model.addAttribute("project", projectEdited);
 		return "new";
     }
 
-    @PostMapping(value = "http://evening-garden-83949.herokuapp.com/private/mywork")
+    @PostMapping(value = "/private/mywork")
     public String create(Project project, Model model) {
 
         System.out.println(project);
