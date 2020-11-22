@@ -1,5 +1,8 @@
-/* import fonts from fonts.css file */ 
-@import url(./fonts.css);
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
 
 body {
 	background: linear-gradient(-135deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -20,10 +23,6 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
-}
-
-button {
-    font-family: 'Poppins', sans-serif;
 }
 
 .jumbotron{
@@ -50,19 +49,12 @@ button {
     align-content: center;
 }
 
-.abcontainer {
-    display: grid;
-    margin: 50px;
-    height: 40vh;
-    padding: 5vw;
-}
-
 .contactBox {
     background-color: whitesmoke;
     place-items: center;
     display: grid;
     opacity: 70%;
-    margin: 50px;
+    margin: 80px;
     height: 40vh;
     padding: 5vw;
 }
@@ -74,16 +66,21 @@ button {
 }
 
 .about-container {
-    background-color: antiquewhite;
-    display: flex;
-    margin-top: 30px;
+    display: grid;
+    margin-top: 60px;
     margin-left: 100px;
     margin-right: 100px;
+    margin-bottom: 60px;
     align-items: center;
 }
 
 #aboutparagraph {
-    margin-top: 20px;
+    background-color: whitesmoke;
+    opacity: 70%;
+}
+
+#abouthead {
+  margin-top: 20px;
 }
 
 .links-container {
@@ -124,6 +121,13 @@ button {
     object-fit: cover;
  }
 
+
+ /* Footer styling */
+
+ .footerab {
+   padding-right: 5em;
+ }
+
  .site-footer {
    background-color: white;
    padding: 20px 0 20px;
@@ -134,11 +138,11 @@ button {
 
  .site-footer hr {
    border-top-color:#bbb;
-   opacity:0.5
+   opacity: 0.5;
  }
 
  .site-footer hr.small {
-   margin:20px 0
+   margin: 20px 0;
  }
 
  .site-footer h6 {

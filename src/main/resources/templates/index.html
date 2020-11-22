@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet"> 
     <link rel="stylesheet" href="/styles/styles.css">
-    
+  
     <title>Alec D'Alelio</title>
 </head>
 <body>
@@ -16,9 +16,8 @@
     <section>
         <div class="jumbotron">
             <h3>Hi, my name is</h3>
-            <h1 class="display-4 nameHeader">Alec D'Alelio.</h1>
-            <h2 class="descriptHeader">I build software and decentralized web applications.</h2>
-            <p class="lead">I'm a full-stack developer and Blockchain evangelist from Boston, MA.</p>
+            <h1 class="display-4 nameHeader">Alec D'Alelio 👋 </h1>
+            <h2 class="descriptHeader">I'm a full-stack developer, content creator and entrepreneur.</h2>
         </div>
 
         <div class="grid cardcontainer">
@@ -39,13 +38,13 @@
                             <a 
                                 th:href="${project.githubURL}"
                                 class="ghlink">See the code</a>
-                            <a
+                            <!-- <a
                                 th:href="@{'/project/delete/{id}'(id=${project.id})}"
                                 class="btn-lg btn-danger">Delete
                             </a> 
                             <a
                                 th:href="@{'/project/edit/{id}'(id=${project.id})}"
-                                class="btn-lg btn-info">Update</a>
+                                class="btn-lg btn-info">Update</a> -->
                         </div>
                     </div>
                 </div>
@@ -53,41 +52,7 @@
         </div> 
     </section>
 
-      <!-- Site footer -->
-    <footer class="site-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-6">
-              <h6>About</h6>
-              <p class="text-justify">Alec D'Alelio is a programmer and a pretty cool guy!</p>
-            </div>
-            <div class="col-xs-6 col md-6">
-              <h6>Quick Links</h6>
-              <ul class="footer-links">
-                <li><a href="about">About Me</a></li>
-                <li><a href="contact">Get in touch</a></li>
-              </ul>
-            </div>
-          </div>
-          <hr>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-sm-6 col-xs-12">
-              <p class="copyright-text">Copyright &copy; Alec D'Alelio 2020</p>
-            </div>
-  
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <ul class="social-icons">
-                <li><a class="github" href="https://github.com/alecdalelio/" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li><a class="twitter" href="https://twitter.com/alecdalel" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                <li><a class="linkedin" href="https://www.linkedin.com/in/alec-d-alelio-72230b81/" target="_blank"><i class="fab fa-linkedin"></i></a></li>   
-                <li><a class="youtube" href="https://www.youtube.com/c/oddentity" target="_blank"><i class="fab fa-youtube"></i></a></li>   
-              </ul>
-            </div>
-          </div>
-        </div>
-    </footer>
+    <div th:replace="fragments/footer"></div>
 
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
