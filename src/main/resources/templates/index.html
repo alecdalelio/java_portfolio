@@ -16,12 +16,11 @@
     <section>
         <div class="jumbotron">
             <h3>Hi, my name is</h3>
-            <h1 class="display-4 nameHeader">Alec D'Alelio 👋 </h1>
+            <h1 class="display-4 nameHeader">Alec D'Alelio ✌️ </h1>
             <h2 class="descriptHeader">I'm a full-stack developer, content creator and entrepreneur.</h2>
         </div>
 
         <div class="grid cardcontainer">
-            <!-- Creates for each loop and makes individual blog posts -->
             <div th:each="project:${projects}">
                 <div>
                     <div class="card projects">
@@ -37,7 +36,9 @@
                             <p class="projectdescription" th:text="${project.description}" />
                             <a 
                                 th:href="${project.githubURL}"
-                                class="ghlink">See the code</a>
+                                class="ghlink"
+                                target="_blank"
+                                >See the code</a>
                             <!-- <a
                                 th:href="@{'/project/delete/{id}'(id=${project.id})}"
                                 class="btn-lg btn-danger">Delete

@@ -25,6 +25,10 @@ body {
 	}
 }
 
+.nav-item:hover {
+  color: slateblue;
+}
+
 .jumbotron{
     display: grid;
     opacity: 70%;
@@ -47,6 +51,7 @@ body {
 
 #aboutimage{
     align-content: center;
+    height: 
 }
 
 .contactBox {
@@ -134,7 +139,7 @@ body {
    font-size:18px;
    line-height:24px;
    color: #33353d;
-   position: fixed;
+   position: relative;
    left: 0;
    bottom: 0;
    width: 100%; 
