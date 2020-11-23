@@ -47,7 +47,7 @@ public class HomeController {
 
     @GetMapping(value = "/private/newproject")
     public String newBlog(Project project) {
-        return "new";
+        return "index";
     }
 
     @RequestMapping(value = "project/delete/{id}")

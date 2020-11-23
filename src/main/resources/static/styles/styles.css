@@ -145,6 +145,20 @@ body {
    width: 100%; 
  }
 
+ .contactfooter {
+  background-color: white;
+  padding: 20px 0 20px;
+  font-size:18px;
+  line-height:24px;
+  color: #33353d;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%; 
+ }
+
+
+
  .site-footer hr {
    border-top-color:#bbb;
    opacity: 0.5;
