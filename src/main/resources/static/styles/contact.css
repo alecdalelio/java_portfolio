@@ -1,0 +1,81 @@
+.contactfooter {
+    background-color: white;
+    padding: 20px 0 20px;
+    font-size:18px;
+    line-height:24px;
+    color: #33353d;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%; 
+   }
+
+.contactfooter {
+background-color: white;
+padding: 20px 0 20px;
+font-size:18px;
+line-height:24px;
+color: #33353d;
+position: relative;
+left: 0;
+bottom: 0;
+width: 100%; 
+}
+
+.contactfooter hr {
+border-top-color:#bbb;
+opacity: 0.5;
+}
+
+.contactfooter hr.small {
+margin: 20px 0;
+}
+
+.contactfooter h6 {
+color: #33353d;
+font-size:16px;
+text-transform:uppercase;
+margin-top:5px;
+letter-spacing:2px
+}
+
+.contactfooter a {
+color:#737373;
+}
+
+.contactfooter a:hover {
+color:#3366cc;
+text-decoration:none;
+}
+
+.contactfooter .social-icons {
+text-align:right
+}
+
+.contactfooter .social-icons a {
+width:40px;
+height:40px;
+line-height:40px;
+margin-left:6px;
+margin-right:0;
+border-radius:100%;
+background-color:#33353d
+}
+
+@media (max-width:991px) {
+.contactfooter [class^=col-]
+{
+    margin-bottom:30px
+}
+}
+
+@media (max-width:767px) {
+.contactfooter
+{
+    padding-bottom:0
+}
+.contactfooter .copyright-text,.site-footer .social-icons
+{
+    text-align:center
+}
+}
