@@ -331,4 +331,6 @@ h3 {
   padding: 50px;
 }
 
-
+.events-header h3 {
+  line-height: 2.5;
+}
