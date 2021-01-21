@@ -1,0 +1,41 @@
+.typing {
+    width: 100%;
+    overflow: hidden;
+    top: 0px;
+    position: relative;
+    animation: typeIt 320s steps(40) infinite;
+
+    h3 {
+        font-size: 1.2em;
+        line-height: 2em;
+        margin: 0; // Turn off margin bottom to make typing animation easier
+        text-indent: 2em; // give it indents for first line
+    }
+}
+
+// just a block to cover the line of text that just appeared and step animate to the right to reveal the line.
+// Change the background color to #fc0 to see it in action.
+.text-cover {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2em;
+    background: #fff;
+    width: 100%;
+    animation: revealLine 8s steps(40) infinite;
+}
+
+@keyframes revealLine {
+    0% { left: 0%; }
+    100% { left: 100%; }
+}
+
+@keyframes typeIt {
+    0% {
+        top: 0;
+        height: 2em;}
+    100% {
+        top: -60em;
+        height: 82em;
+    }
+}
