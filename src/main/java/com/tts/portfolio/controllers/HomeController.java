@@ -45,6 +45,12 @@ public class HomeController {
         return "contact";
     }
 
+    @GetMapping("/events")
+    public String events() {
+
+        return "events";
+    }
+
     @GetMapping(value = "/private/newproject")
     public String newBlog(Project project) {
         return "new";

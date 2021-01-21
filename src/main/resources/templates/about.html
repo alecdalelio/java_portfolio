@@ -1,52 +1,99 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/styles.css" class="style">
-    <link rel="stylesheet" href="styles/typing.css" class="style">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/styles.css" class="style" />
+    <link rel="stylesheet" href="styles/typing.css" class="style" />
     <title>About Me</title>
-</head>
-<body>
+  </head>
+  <body>
     <div th:replace="fragments/navbar"></div>
 
     <div class="about-container">
-        <div class="row">
-            <div class="col-lg" id="aboutimage">
-                <img src="img/alec.png" class="img-fluid" width="550px" height="750px"> 
-            </div>
-
-            <div class="col-lg" id="aboutparagraph">
-                <div class="typing-container">
-                    <p>I am <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
-                </div>
-                
-                <div class="aboutp">
-                    <p>Hi – I’m <a href="https://www.linkedin.com/in/alec-d-alelio-72230b81/">Alec D’Alelio</a>. I work to imbue tech with innovative and experimental ideas with particular interest in full stack development and the decentralized web. I carry a growth mindset that fuels my appetite for new skills and knowledge. I am currently seeking a full-time developer role.
-                    </p><br />
-
-                    <p>I've gotten here with:</p>
-                        <ul>
-                            <li>B.S in Learning & Organizational Change from Northwestern University | Minors in Entrepreneurship & Music Tech</li>
-                            <li>Java Code Immersion program with Tech Talent South</li>
-                            <li>Consensys Academy Blockchain Developer Certificate</li>
-                        </ul>
-                    <br />
-
-                    <p>In my free time I:</p>
-                        <ul>
-                            <li>Create content for my YouTube channel, <a href="https://www.youtube.com/c/oddentity" target="_blank">Alec D'Alelio Guitar</a>, which has amassed over 1,000,000 views</li>
-                            <li>Manage a private guitar lesson business, teaching clients around the world </li>
-                            <li>Explore the vast possibilities of Blockchain, Web3 and smart contracts</li>
-                        </ul>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-lg" id="aboutimage">
+          <img
+            src="img/alec.png"
+            class="img-fluid"
+            width="550px"
+            height="750px"
+          />
         </div>
+
+        <div class="col-lg" id="aboutparagraph">
+          <div class="typing-container">
+            <p>
+              I am <span class="typed-text"></span
+              ><span class="cursor">&nbsp;</span>
+            </p>
+          </div>
+
+          <div class="aboutp">
+            <p>
+              Hi – I’m
+              <a href="https://www.linkedin.com/in/alec-d-alelio-72230b81/"
+                >Alec D’Alelio</a
+              >. I work at the intersection of the tech and creative industries
+              as a connector and advocate for great products, people and ideas.
+              So far, this work has taken the form of
+              <a
+                href="https://www.offbeat.com/news/504life-returns-with-second-event-to-fundraise-for-ppe/"
+                >event production</a
+              >
+              (digital & in-person),
+              <a
+                href="https://www.amazon.com/Everything-Its-Right-Place-Transparent-ebook/dp/B07BB69CNL#:~:text=From%20a%20leading%20thinker%2C%20writer,ongoing%20work%20in%20Blockchain%20Tech.&text=All%20of%20the%20above%20is,careers%20on%20their%20own%20terms."
+                >project management</a
+              >
+              and content creation. I carry a growth mindset that fuels my
+              appetite for new skills and knowledge, and I am seeking a
+              full-time role in the Blockchain industry to further this growth.
+            </p>
+            <br />
+
+            <p>I've gotten here with:</p>
+            <ul>
+              <li>
+                B.S in Learning & Organizational Change from Northwestern
+                University | Minors in Entrepreneurship & Music Tech
+              </li>
+              <li>Java Code Immersion program with Tech Talent South</li>
+              <li>Consensys Academy Blockchain Developer Certificate</li>
+            </ul>
+            <br />
+
+            <p>In my free time I:</p>
+            <ul>
+              <li>
+                Create content for my YouTube channel, <a
+                  href="https://www.youtube.com/c/oddentity"
+                  target="_blank"
+                  >Alec D'Alelio Guitar</a
+                >, which has amassed over 1,000,000 views
+              </li>
+              <li>
+                Manage a private guitar lesson business, teaching clients around
+                the world
+              </li>
+              <li>
+                Explore the vast possibilities of Blockchain, Web3 and smart
+                contracts
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div th:replace="fragments/footer"></div>
 
     <script src="/js/typing.js"></script>
-</body>
+  </body>
 </html>
