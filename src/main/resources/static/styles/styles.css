@@ -331,9 +331,10 @@ h3 {
   padding: 50px;
 }
 
+.events-header {
+  align-content: center;
+}
+
 .events-header h3 {
   line-height: 1.8;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
