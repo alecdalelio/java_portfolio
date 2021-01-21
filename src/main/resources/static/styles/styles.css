@@ -333,9 +333,6 @@ h3 {
 
 .events-header h3 {
   line-height: 1.8;
-}
-
-.events-text {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
